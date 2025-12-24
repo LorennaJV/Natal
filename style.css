@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background: rgba(255, 245, 245, 0.9);
+  padding: 32px;
+  border-radius: 22px;
+  max-width: 540px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #8b1e3f;
+}
+
+.intro {
+  margin: 15px 0 25px;
+  color: #5a2a2a;
+}
+
+.pergunta, .dica {
+  margin-bottom: 18px;
+  color: #6b2c2c;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d8b4b4;
+  margin-bottom: 12px;
+}
+
+button {
+  background: linear-gradient(135deg, #b23a48, #8b1e3f);
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#mensagemErro {
+  margin-top: 10px;
+  color: #a10000;
+}
+
+.surpresa {
+  display: none;
+  animation: aparecer 1.2s ease forwards;
+}
+
+.carta {
+  background: #fff;
+  padding: 24px;
+  border-radius: 18px;
+  margin-top: 20px;
+  animation: abrirCarta 1.4s ease;
+}
+
+.assinatura {
+  margin-top: 18px;
+  text-align: right;
+  font-style: italic;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes abrirCarta {
+  from { transform: scale(0.7) rotateX(20deg); opacity: 0; }
+  to { transform: scale(1) rotateX(0); opacity: 1; }
+}
+
+/* ❄️ NEVE REAL */
+.neve span {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: cair linear infinite;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(110vh);
+  }
+}
